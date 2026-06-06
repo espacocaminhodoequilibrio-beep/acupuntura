@@ -463,11 +463,9 @@ opacity:.8;
 
 @media(max-width:900px){
 
-```
-.footer-content{
+@media(max-width:900px){
+  .footer-content{
     grid-template-columns:1fr;
     text-align:center;
-}
-```
-
+  }
 }
