@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <!-- corrente central -->
+  <path d="M64 8v9"/>
+  <rect x="59.5" y="17" width="9" height="14" rx="4.5"/>
+  <path d="M64 31v5"/>
+  <rect x="59.5" y="36" width="9" height="14" rx="4.5" transform="rotate(12 64 43)"/>
+  <path d="M64 50v6"/>
+  <rect x="59.5" y="56" width="9" height="14" rx="4.5"/>
+  <path d="M64 70v8"/>
+
+  <!-- correntes laterais suaves -->
+  <g stroke="#777" stroke-width="2.4" opacity=".45">
+    <path d="M62 30c-10 8-18 20-22 34"/>
+    <rect x="44" y="37" width="8" height="13" rx="4" transform="rotate(31 48 43.5)"/>
+    <rect x="36" y="55" width="8" height="13" rx="4" transform="rotate(25 40 61.5)"/>
+    <path d="M66 30c10 8 18 20 22 34"/>
+    <rect x="76" y="37" width="8" height="13" rx="4" transform="rotate(-31 80 43.5)"/>
+    <rect x="84" y="55" width="8" height="13" rx="4" transform="rotate(-25 88 61.5)"/>
+  </g>
+
+  <!-- relógios laterais em segundo plano -->
+  <g stroke="#777" stroke-width="2.8" opacity=".35">
+    <circle cx="39" cy="82" r="24"/>
+    <circle cx="39" cy="82" r="18" stroke-width="1.8" opacity=".45"/>
+    <path d="M26 69l-4-5M52 69l4-5"/>
+    <path d="M31 59l-2-6h20l-2 6"/>
+    <path d="M39 70v-5M39 99v-5M24 82h5M49 82h5"/>
+    <path d="M39 82l-9 2M39 82l7-7"/>
+
+    <circle cx="89" cy="82" r="24"/>
+    <circle cx="89" cy="82" r="18" stroke-width="1.8" opacity=".45"/>
+    <path d="M76 69l-4-5M102 69l4-5"/>
+    <path d="M81 59l-2-6h20l-2 6"/>
+    <path d="M89 70v-5M89 99v-5M74 82h5M99 82h5"/>
+    <path d="M89 82l-6 7M89 82l11-9"/>
+  </g>
+
+  <!-- argola e topo do relógio frontal -->
+  <circle cx="64" cy="64" r="10" fill="white"/>
+  <path d="M55 70h18v10H55z" fill="white"/>
+  <rect x="55" y="72" width="18" height="9" rx="3" fill="#111" stroke="#111"/>
+
+  <!-- relógio frontal -->
+  <circle cx="64" cy="90" r="29" fill="white"/>
+  <circle cx="64" cy="90" r="22" stroke-width="2" opacity=".2"/>
+
+  <!-- marcadores -->
+  <path d="M64 68v7M64 105v7M42 90h7M79 90h7"/>
+  <path d="M49 75l4 5M79 75l-4 5M49 105l4-5M79 105l-4-5" stroke-width="2.4"/>
+
+  <!-- ponteiros -->
+  <circle cx="64" cy="90" r="3.2" fill="white"/>
+  <path d="M64 90l12-3"/>
+  <path d="M64 90l7-17"/>
+
+  <!-- sombra discreta -->
+  <ellipse cx="64" cy="123" rx="22" ry="2" fill="#111" opacity=".12" stroke="none"/>
+</svg>
