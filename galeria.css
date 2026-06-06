@@ -1,0 +1,200 @@
+/* Galeria / Meu Trabalho */
+
+.gallery-hero{
+  padding:90px 20px 70px;
+  text-align:center;
+  background:linear-gradient(135deg,rgba(239,244,226,.95),rgba(248,245,231,.98));
+}
+
+.gallery-hero h1{
+  color:#435844;
+  font-size:clamp(2.3rem,5vw,4rem);
+  margin:12px 0;
+}
+
+.gallery-hero p{
+  max-width:760px;
+  margin:0 auto;
+  color:#687263;
+  font-size:1.12rem;
+  line-height:1.8;
+}
+
+.gallery-section{
+  padding:80px 20px 50px;
+  background:#fbfaf3;
+}
+
+.carousel{
+  position:relative;
+  max-width:980px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.carousel-track-wrapper{
+  overflow:hidden;
+  width:100%;
+  border-radius:34px;
+  box-shadow:0 22px 55px rgba(67,88,68,.16);
+  background:rgba(255,255,255,.82);
+  border:1px solid rgba(107,130,96,.18);
+}
+
+.carousel-track{
+  display:flex;
+  transition:transform .55s ease;
+}
+
+.carousel-slide{
+  min-width:100%;
+  display:grid;
+  grid-template-columns:45% 55%;
+  align-items:stretch;
+  background:linear-gradient(135deg,#fff,#f4f7ea);
+}
+
+.carousel-slide img{
+  width:100%;
+  height:620px;
+  object-fit:cover;
+  display:block;
+}
+
+.slide-caption{
+  padding:55px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.slide-caption h2{
+  color:#435844;
+  font-size:2.2rem;
+  margin-bottom:18px;
+}
+
+.slide-caption p{
+  color:#5f665b;
+  font-size:1.12rem;
+  line-height:1.85;
+}
+
+.carousel-btn{
+  width:48px;
+  height:48px;
+  border:none;
+  border-radius:50%;
+  background:#7b8d70;
+  color:#fff;
+  font-size:1.5rem;
+  cursor:pointer;
+  box-shadow:0 10px 24px rgba(67,88,68,.20);
+  transition:.25s;
+  z-index:5;
+}
+
+.carousel-btn:hover{
+  background:#5f7258;
+  transform:translateY(-2px);
+}
+
+.carousel-dots{
+  margin:28px auto 0;
+  text-align:center;
+}
+
+.dot{
+  width:12px;
+  height:12px;
+  border:none;
+  border-radius:50%;
+  margin:0 5px;
+  background:#c6cfba;
+  cursor:pointer;
+  transition:.25s;
+}
+
+.dot.active{
+  background:#6f8768;
+  transform:scale(1.2);
+}
+
+.gallery-thumbs-section{
+  padding:50px 20px 80px;
+  background:#fbfaf3;
+}
+
+.gallery-thumbs-section h2{
+  text-align:center;
+  color:#435844;
+  font-size:2rem;
+  margin-bottom:35px;
+}
+
+.gallery-thumbs{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:16px;
+}
+
+.gallery-thumbs img{
+  width:100%;
+  height:190px;
+  object-fit:cover;
+  border-radius:20px;
+  border:1px solid rgba(107,130,96,.18);
+  box-shadow:0 10px 26px rgba(67,88,68,.09);
+  cursor:pointer;
+  transition:.25s;
+}
+
+.gallery-thumbs img:hover{
+  transform:translateY(-4px);
+}
+
+.cta-buttons{
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  flex-wrap:wrap;
+  margin-top:25px;
+}
+
+.btn-secondary{
+  display:inline-block;
+  padding:14px 28px;
+  border-radius:50px;
+  text-decoration:none;
+  color:#435844;
+  background:rgba(255,255,255,.82);
+  border:1px solid rgba(107,130,96,.28);
+  font-weight:700;
+  transition:.25s;
+}
+
+.btn-secondary:hover{
+  transform:translateY(-2px);
+  background:#fff;
+}
+
+@media(max-width:900px){
+  .carousel{gap:8px}
+  .carousel-slide{grid-template-columns:1fr}
+  .carousel-slide img{height:520px}
+  .slide-caption{padding:32px;text-align:center}
+  .carousel-btn{position:absolute;top:40%}
+  .carousel-btn.prev{left:-6px}
+  .carousel-btn.next{right:-6px}
+  .gallery-thumbs{grid-template-columns:repeat(3,1fr)}
+  .gallery-thumbs img{height:170px}
+}
+
+@media(max-width:520px){
+  .gallery-section{padding-inline:12px}
+  .carousel-slide img{height:430px}
+  .slide-caption h2{font-size:1.7rem}
+  .gallery-thumbs{grid-template-columns:repeat(2,1fr)}
+}
