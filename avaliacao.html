@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h2>Avaliação</h2>
+
+<input
+  type="text"
+  id="nome"
+  placeholder="Seu nome">
+
+<br><br>
+
+<textarea
+  id="comentario"
+  placeholder="Sua experiência">
+</textarea>
+
+<br><br>
+
+<button onclick="enviar()">
+  Enviar
+</button>
+
+<script>
+function enviar() {
+  const dados = new FormData();
+
+  dados.append("nome", document.getElementById("nome").value);
+  dados.append("comentario", document.getElementById("comentario").value);
+
+  fetch("https://script.google.com/macros/s/SEU_CODIGO/exec", {
+    method: "POST",
+    body: dados,
+    mode: "no-cors"
+  })
+  .then(() => {
+    alert("Avaliação enviada com sucesso!");
+    document.getElementById("nome").value = "";
+    document.getElementById("comentario").value = "";
+  })
+  .catch(() => {
+    alert("Erro ao enviar. Tente novamente.");
+  });
+}
+</script>
+
+</body>
+</html>
