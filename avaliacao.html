@@ -1,39 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <body>
-<h2>Avaliação 4</h2>
-<input
-  type="text"
-  id="nome"
-  placeholder="Seu nome">
-<br><br>
-<textarea
-  id="comentario"
-  placeholder="Sua experiência">
-</textarea>
-<br><br>
-<button onclick="enviar()">
-  Enviar
-</button>
+
+<h2>Avaliação 5</h2>
+
+<form 
+  action="https://script.google.com/macros/s/AKfycbzNegDQ3lpAHBZeOAtMrWm0WofEpLfUEW9s9eyCVssh9ZL-D6p1SsbQLT_LHmanPtog/exec"
+  method="POST"
+  target="hidden_iframe"
+  onsubmit="enviado()">
+
+  <input 
+    type="text" 
+    name="nome" 
+    placeholder="Seu nome" 
+    required>
+
+  <br><br>
+
+  <textarea 
+    name="comentario" 
+    placeholder="Sua experiência" 
+    required></textarea>
+
+  <br><br>
+
+  <button type="submit">Enviar</button>
+</form>
+
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
 <script>
-function enviar() {
-  const dados = new FormData();
-  dados.append("nome", document.getElementById("nome").value);
-  dados.append("comentario", document.getElementById("comentario").value);
-  fetch("https://script.google.com/macros/s/AKfycbwnyViDdJQ4EnWv13zwXM9EwjaLvZ3IQJjPJuHDPrNRIBgqHkqPHa5-QYelvk9gVitI/exec", {
-    method: "POST",
-    body: dados,
-    mode: "no-cors"
-  })
-  .then(() => {
-    alert("Avaliação enviada com sucesso!");
-    document.getElementById("nome").value = "";
-    document.getElementById("comentario").value = "";
-  })
-  .catch(() => {
-    alert("Erro ao enviar. Tente novamente.");
-  });
+function enviado(){
+  alert("Avaliação enviada com sucesso!");
 }
 </script>
+
 </body>
 </html>
