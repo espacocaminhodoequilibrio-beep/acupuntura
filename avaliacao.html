@@ -1,36 +1,26 @@
 <!DOCTYPE html>
 <html>
-
 <body>
-
-<h2>Avaliação 3</h2>
-
+<h2>Avaliação 4</h2>
 <input
   type="text"
   id="nome"
   placeholder="Seu nome">
-
 <br><br>
-
 <textarea
   id="comentario"
   placeholder="Sua experiência">
 </textarea>
-
 <br><br>
-
 <button onclick="enviar()">
   Enviar
 </button>
-
 <script>
 function enviar() {
   const dados = new FormData();
-
   dados.append("nome", document.getElementById("nome").value);
   dados.append("comentario", document.getElementById("comentario").value);
-
-  fetch("https://script.google.com/macros/s/AKfycbyUXV9sGhUyCM1tVSYyC1oS8VEp4DO57HLds0cvMQNUMhf6dibOkYmc3vvcvZ4HXOCr/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbwnyViDdJQ4EnWv13zwXM9EwjaLvZ3IQJjPJuHDPrNRIBgqHkqPHa5-QYelvk9gVitI/exec", {
     method: "POST",
     body: dados,
     mode: "no-cors"
@@ -45,6 +35,5 @@ function enviar() {
   });
 }
 </script>
-
 </body>
 </html>
